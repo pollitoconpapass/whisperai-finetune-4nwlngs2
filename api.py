@@ -6,7 +6,7 @@ from fastapi import FastAPI, File, UploadFile
 
 
 app = FastAPI()
-pipe = pipeline(model="pollitoconpapass/whisper-small-finetuned")  # -> change for the model you created (yourusername/model-name)
+pipe = pipeline(model="yourusername/model-name")  # -> change for the model you created 
 
 @app.post("/transcribe-whisper")
 async def transcribe(audio: UploadFile = File(...)):
